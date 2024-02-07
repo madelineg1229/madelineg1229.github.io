@@ -1,59 +1,131 @@
-body{
-    background: rgb(225, 227, 252);
-    color: rgb(45, 45, 45);
-    padding: 10px;
-    font-family: "Courier New", monospace;
+body {
+  background: rgb(225, 227, 252);
+  color: rgb(45, 45, 45);
+  padding: 10px;
+  font-family: "Courier New", monospace;
 }
-#all-contents{
-    max-width: 800px;
-        margin: auto;
+#all-contents {
+  max-width: 800px;
+  margin: auto;
 }
 
-
-nav{
-    background: rgb(151, 200, 255);
-    margin: 0 auto;
-    margin-bottom: 20px;
-    display: flex;
-    padding: 10px;
+nav {
+  background: rgb(151, 200, 255);
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  padding: 10px;
 }
-h1{
-    display: flex;
-    align-items: center;
-    color: white;
-    flex: 1;
-    margin: 0;
+h1 {
+  display: flex;
+  align-items: center;
+  color: white;
+  flex: 1;
+  margin: 0;
 }
-#nav-ul{
-    list-style-image: none;
+#nav-ul {
+  list-style-image: none;
 }
-.nav-li{
-    display: inline-block;
-    padding: 0 10px;
+.nav-li {
+  display: inline-block;
+  padding: 0 10px;
 }
 main {
-    background: rgb(243, 192, 235);
-    display: flex;
+  background: rgb(243, 192, 235);
+  display: flex;
 }
-.sidebar{
-    margin-right: 20px;
-    margin-top: 40px;
-    margin-left: 15px;
-    padding: 10px;
+.sidebar {
+  margin-right: 20px;
+  margin-top: 40px;
+  margin-left: 15px;
+  padding: 10px;
 }
 
 .sidebar-img {
-    width: 250px;
+  width: 250px;
 }
 .content {
-    flex: 1;
-    padding: 50px;
+  flex: 1;
+  padding: 50px;
 }
 
 #interests {
-    border: 4px silver ridge;
-    padding: 8px;
+  border: 4px silver ridge;
+  padding: 8px;
 }
-h2, h3{ 
-    margin: 0px;
+h2,
+h3 {
+  margin: 0px;
+}
+.content h1 {
+  color: black;
+}
+
+#portfolio {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#portfolio li {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#portfolio li:hover {
+  background: #eee;
+}
+
+#portfolio a {
+  text-decoration: none;
+  color: #454545;
+}
+@media screen and (min-width: 120px) and (max-width: 1080px) {
+  main {
+    height: 100ch;
+    zoom: 1.5;
+    display: grid;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  h3 {
+    font-size: 36px;
+  }
+
+  #all-contents {
+    height: 100ch;
+    margin: none;
+  }
+
+  a {
+    font-size: 42px;
+  }
+
+  .sidebar {
+    margin-right: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar-img {
+    width: 100%;
+  }
+
+  p,
+  li {
+    font-size: 24px;
+  }
+
+  .content {
+    align-content: center;
+    justify-content: center;
+  }
 }
