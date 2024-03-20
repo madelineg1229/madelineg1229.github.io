@@ -19,6 +19,11 @@
       }
       .board {
         height: 100vh;
+        background-image: linear-gradient(
+          rgb(195, 242, 250),
+          rgb(158, 219, 255),
+          rgb(124, 185, 255)
+        );
       }
     </style>
     <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -42,15 +47,28 @@
         var boardHeight = jQuery(window).height();
         // Every 50 milliseconds, call the update Function (see below)
         var interval = setInterval(update, 50);
-        var randNum = Math.random() * 100;
+
         function endGame() {
           clearInterval(interval);
         }
 
-        function getRandomColor(colorStr) {
-          var colorStr = "rgb(50, 25, 250)";
+        function getRandomColor() {
+          var getRandomColor = Math.random() * 255;
+          var getRandomColor2 = Math.random() * 255;
+          var getRandomColor3 = Math.random() * 255;
+          var colorStr =
+            "rgb(" +
+            getRandomColor +
+            ", " +
+            getRandomColor2 +
+            ", " +
+            getRandomColor3 +
+            ")";
           box.css("background-color", colorStr);
-          var randomNumberBetween0and10 = Math.random() * 10;
+        }
+
+        function randNum() {
+          var randNum = Math.random() * 255;
         }
         // Every time the box is clicked, call the handleBoxClick Function (see below)
         box.on("click", handleBoxClick);
@@ -109,6 +127,7 @@
       the left side of the screen.
       */
         function handleBoxClick() {
+          getRandomColor();
           positionX = 0;
           positionY = 0;
           points = points + 1;
