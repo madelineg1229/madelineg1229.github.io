@@ -47,7 +47,7 @@
         var boardHeight = jQuery(window).height();
         // Every 50 milliseconds, call the update Function (see below)
         var interval = setInterval(update, 50);
-
+        
         function endGame() {
           clearInterval(interval);
         }
@@ -106,6 +106,7 @@
           positionY = positionY + speedY;
           console.log("update");
           moveBoxTo(positionX, positionY);
+          box.text(points);
 
           if (positionX > boardWidth) {
             speed = speed * -1;
