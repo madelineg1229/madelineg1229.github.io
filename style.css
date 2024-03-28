@@ -1,5 +1,5 @@
 body {
-  background: rgb(252, 235, 225);
+  background: rgb(190, 229, 255);
   color: rgb(45, 45, 45);
   padding: 10px;
   font-family: "Courier New", monospace;
@@ -10,7 +10,7 @@ body {
 }
 
 nav {
-  background: rgb(151, 200, 255);
+  background: rgb(161, 195, 255);
   margin: 0 auto;
   margin-bottom: 20px;
   display: flex;
@@ -31,7 +31,7 @@ h1 {
   padding: 0 10px;
 }
 main {
-  background: rgb(243, 192, 235);
+  background: rgb(255, 254, 236);
   display: flex;
 }
 .sidebar {
@@ -50,7 +50,7 @@ main {
 }
 
 #interests {
-  border: 4px silver ridge;
+  border: 4px rgb(193, 204, 255) ridge;
   padding: 8px;
 }
 h2,
@@ -58,7 +58,7 @@ h3 {
   margin: 0px;
 }
 .content h1 {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 #portfolio {
@@ -67,14 +67,14 @@ h3 {
 }
 
 #portfolio li {
-  background: #fff;
+  background: #bbf5fd;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
 #portfolio li:hover {
-  background: #eee;
+  background: #d34848;
 }
 
 #portfolio a {
