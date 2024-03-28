@@ -20,9 +20,9 @@ var init = function (window) {
     var circles = [];
 
     // TODO 2 : Create a function that draws a circle
-    function nameOfFunction(parameters) {
+    function drawCircle() {
       circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
-      physikz.addRandomVelocity(circle, canvas, 2.5, 2.5);
+      physikz.addRandomVelocity(circle, canvas, 27, 12);
       view.addChild(circle);
       circles.push(circle);
     }
@@ -43,12 +43,17 @@ var init = function (window) {
         and check to see if it has drifted off the screen.         
         */
     function update() {
-      physikz.updatePosition();
-      physikz.updatePosition();
-      physikz.updatePosition();
-      physikz.updatePosition();
-      physikz.updatePosition();
-      // TODO 4 : Update the circle's position //
+      physikz.updatePosition(circles[0]);
+      physikz.updatePosition(circles[1]);
+      physikz.updatePosition(circles[2]);
+      physikz.updatePosition(circles[3]);
+      physikz.updatePosition(circles[4]);
+
+      game.checkCirclePosition(circles[0]);
+      game.checkCirclePosition(circles[1]);
+      game.checkCirclePosition(circles[2]);
+      game.checkCirclePosition(circles[3]);
+      game.checkCirclePosition(circles[4]);
       // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
       // TODO 9 : Iterate over the array
     }
@@ -62,6 +67,9 @@ var init = function (window) {
       // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
       if (circle.x > canvas.width) {
         circle.x = 0;
+      if (circle.y > canvas.height) {
+          circle.y = 0;
+        }
       }
 
       // TODO 6 : YOUR CODE STARTS HERE //////////////////////
