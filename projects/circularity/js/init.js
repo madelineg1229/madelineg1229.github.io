@@ -29,7 +29,8 @@ var init = function (window) {
 
     // TODO 3 / 7 : Call the drawCircle() function
 
-    for (var loopsCompleted = 0; loopsCompleted < 10; loopsCompleted++) {
+    for (var loopsCompleted = 0; loopsCompleted < 1000; loopsCompleted++) {
+      if (loopsCompleted()  )
       loopsCompleted++;
     }
     ////////////////////////////////////////////////////////////
